@@ -1,8 +1,8 @@
 
 // #include <bits/stdc++.h>
 #include <vector>
-#include "forest-5.h"
-#include "roc_auc.h"
+#include "dynfrs.h"
+#include "Disc/roc_auc.h"
 
 using namespace std;
 using namespace std::chrono;
