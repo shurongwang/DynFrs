@@ -59,8 +59,7 @@ def dataset_specific(random_state, test_size):
 
 def main(random_state=1, test_size=0.2, out_dir='continuous'):
 
-	train_df, test_df, label, numeric, categorical = dataset_specific(random_state=random_state,
-																	  test_size=test_size)
+	train_df, test_df, label, numeric, categorical = dataset_specific(random_state=random_state, test_size=test_size)
 
 	# encode categorical inputs
 	ct = ColumnTransformer([('kbd', 'passthrough', numeric),
