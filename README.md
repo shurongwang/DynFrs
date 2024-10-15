@@ -13,6 +13,7 @@ Please cite by bibtex:
 ```
 
 ## Installation
+
 Just simply git clone this project or download it.
 
 ## Usage
@@ -46,3 +47,20 @@ will train DynFrs on the Adult dataset, and automatically set the hyperparameter
 ./dynfrs -data Higgs -T 100 -k 10 -d 30 -s 20 -stream 500000 500000 1000000
 ```
 will train DynFrs on the Higgs dataset with $T=100$, $k=10$ (i.e. $q = 0.1$), $d = 30$, $s = 20$), and then feed it with a online mixed data stream with $5\times10^5$ sample addition requests, $5\times10^5$ sample deletion requests$, and $10^6$ querying requests. It will report the average, minimum, and maximum delay for each type of request, and the percentage of correct prediction.
+
+## Datasets
+
+All datasets except Synthetic and Higgs are included in the repo. For Synthetic and Higgs, run the following command to generate/download and preprocess the data: (replace `<dataset>` with `Synthetic` or `Higgs`)
+```
+cd Datasets/<dataset> ; sh gen.sh
+```
+
+For external datasets, create two files `train.txt` and `test.txt` under `Datasets/Other`, with the following format:
+```
+<number of rows> <number of columns>
+X_11 X_12 ... X_1d Y_1
+X_21 X_22 ... X_2d Y_2
+...  ...  ... ...  ...
+X_n1 X_n2 ... X_nd Y_n
+```
+where `<number of rows>` should equal $n$ denoting the number of samples, and `<number of columns>` should equal $d+1$ denoting the number of attributes of each samples plus one. Note that the label of each sample is placed after each sample within the same line.
