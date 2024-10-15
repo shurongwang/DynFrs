@@ -23,6 +23,7 @@ First, compile `main.cpp` with
 g++ main.cpp -o dynfrs -std=c++17 -O3
 ```
 Then, execute `dynfrs` with the following flags:
+
 | Flag                     	| Description                                                                	| Arguments                                                                                                                                                                   	|
 |--------------------------	|----------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 | `-data`                  	| set which dataset to train on                                              	| dataset names <br> (e.g., `Purchase`, `Vaccine`, `Adults`, etc.)                                                                                                            	|
@@ -46,7 +47,7 @@ will train DynFrs on the Adult dataset, and automatically set the hyperparameter
 ```
 ./dynfrs -data Higgs -T 100 -k 10 -d 30 -s 20 -stream 500000 500000 1000000
 ```
-will train DynFrs on the Higgs dataset with $T=100$, $k=10$ (i.e. $q = 0.1$), $d = 30$, $s = 20$), and then feed it with a online mixed data stream with $5\times10^5$ sample addition requests, $5\times10^5$ sample deletion requests$, and $10^6$ querying requests. It will report the average, minimum, and maximum delay for each type of request, and the percentage of correct prediction.
+will train DynFrs on the Higgs dataset with $T=100$, $k=10$ (i.e., $q=0.1$), $d=30$, $s=20$, and then feed it with a online mixed data stream with $5\times10^5$ sample addition requests, $5\times10^5$ sample deletion requests$, and $10^6$ querying requests. It will report the average, minimum, and maximum delay for each type of request, and the percentage of correct prediction.
 
 ## Datasets
 
