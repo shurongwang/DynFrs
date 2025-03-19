@@ -1,6 +1,20 @@
 # DynFrs
 
-This is the official implementation for DynFrs (Anonymous, 2024), which is an efficient framework to perform machine unlearning (training sample removal) and online learning (training sample insertion) in Random Forests.
+This is the official implementation for DynFrs (Wang, 2024), which is an efficient framework to perform machine unlearning (remove existing training sample) and online learning (add new training samples) in Random Forests.
+
+The paper has been published as a conference paper at the Thirteenth International Conference on Learning Representations (ICLR 2025).
+
+## Citation
+```
+@inproceedings{
+  wang2025dynfrs,
+  title={DynFrs: An Efficient Framework for Machine Unlearning in Random Forest},
+  author={Shurong Wang and Zhuoyang Shen and Xinbao Qiao and Tongning Zhang and Meng Zhang},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=nsCOeCLR8e}
+}
+```
 
 ## Installation
 
